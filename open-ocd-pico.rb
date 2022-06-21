@@ -25,7 +25,8 @@ class OpenOcdPico < Formula
       ENV["CCACHE"] = "none"
   
       system "./bootstrap", "nosubmodule" if build.head?
-      system "./configure", "--disable-dependency-tracking",
+      system "./configure", "--program-suffix=\"-pico\"",
+                            "--disable-dependency-tracking",
                             "--prefix=#{prefix}",
                             "--enable-buspirate",
                             "--enable-stlink",

@@ -2,17 +2,14 @@
 class OpenOcdPico < Formula
     desc "OpenOCD for Raspberry Pi Pico"
     homepage "https://openocd.org/"
-    url "https://github.com/raspberrypi/openocd.git"
     license "GPL-2.0-or-later"
   
-    head do
-      url "https://github.com/raspberrypi/openocd.git", branch: "rp2040"
-  
-      depends_on "autoconf" => :build
-      depends_on "automake" => :build
-      depends_on "libtool" => :build
-      depends_on "texinfo" => :build
-    end
+    head "https://github.com/raspberrypi/openocd.git", branch: "rp2040"
+
+    depends_on "autoconf" => :build
+    depends_on "automake" => :build
+    depends_on "libtool" => :build
+    depends_on "texinfo" => :build
   
     depends_on "pkg-config" => :build
     depends_on "capstone"

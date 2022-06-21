@@ -6,8 +6,7 @@ class OpenOcdPico < Formula
     license "GPL-2.0-or-later"
   
     head do
-      url "https://github.com/raspberrypi/openocd.git"
-      branch "rp2040"
+      url "https://github.com/raspberrypi/openocd.git", branch: "rp2040"
   
       depends_on "autoconf" => :build
       depends_on "automake" => :build
